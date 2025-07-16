@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colecclub - Erice Delfina</title>
+
+    <!-- Tipografía desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+    <!-- Framework CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR: Menú de navegación fijo superior -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <!-- Logo o nombre del sitio -->
+    <a class="navbar-brand" href="#">ColecClub</a>
+    <!-- Botón para mostrar menú en mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Ítems del menú -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Colecbox</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">GeekSwap</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- /NAVBAR -->
+
+<!-- HERO: Sección de portada con llamado a la acción -->
+<section class="hero">
+  <div class="hero-content d-flex align-items-center justify-content-between">
+  <div class="container">
+    <div class="row align-items-center">
+    <!-- Texto principal -->
+      <div class="col-lg-6">
+        <h1 class="h1-custom">Tu dosis mensual de cultura pop</h1>
+        <p class="p-custom">Recibí cada mes una caja con figuras, cómics y merch oficial de tus universos favoritos.</p>
+        <div class="d-flex gap-3 mt-4">
+      </div>
+    </div>
+    <!-- Imagen destacada -->
+      <div class="col-lg-6 text-center">
+      <img src="imagenes/500x500headpng.png" class="img-fluid img-rounded" alt="Imagen Hero">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /HERO -->
+
+<!-- ABOUT: Sección sobre nosotros -->
+<section class="about-section">
+  <h2 class="h2-custom h2-negro">Quienes somos</h2>
+  <p class="mt-3 mb-5"> ColecClub es una caja mensual con artículos oficiales de tus universos favoritos: Marvel, Anime, Star Wars, DC y más. <br> Cada mes, una experiencia nueva directo a tu puerta.</p>
+  <div class="row">
+  </div>
+</section>
+<!-- /ABOUT -->
+
+<!-- SECCIÓN: ¿Qué trae cada box? -->
+<section class="contenido-section">
+  <h2 class="h2-custom h2-blanco">¿Qué trae cada box?</h2>
+  <div class="container">
+    <div class="row gx-4 gy-4 justify-content-center">
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card h-100">
+          <img src="imagenes/100x100funkop.png" alt="Funko Pop Exclusivo">
+          <h5>Funko Pop Exclusivo</h5>
+          <p>Elige tu personaje favorito y coleccionalo</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card h-100">
+          <img src="imagenes/100x100remera.png" alt="Remera Personalizada">
+          <h5>Remera Personalizada</h5>
+          <p>Personalizamos al 100% una remera con tu serie o comic favorito</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="card h-100">
+          <img src="imagenes/100x100llavero.png" alt="Llaveros 3D">
+          <h5>Llaveros 3D</h5>
+          <p>Llavero de la serie o comic que prefieras.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECCIÓN C: Texto izquierda, imagen derecha -->
+<section class="geek-section">
+  <div class="row align-items-center">
+    <!-- Columna de texto -->
+    <div class="col-lg-6">
+      <h2 class="display-5" class="h2-custom">¿Pieza repetida? <br> No te preocupes,<br> usá geekswap</h2>
+      <p class="lead-custom">Nuestro sistema de intercambio exclusivo entre suscriptores. Canjeá ítems repetidos o que no te coparon, y conseguí ese que te falta para completar tu colección.</p>
+      <a href="#" class="btn btn-dark mt-3">Conocé más</a>
+    </div>
+    <!-- Columna de imagen -->
+    <div class="col-lg-6 text-center mt-4 mt-lg-0">
+      <img src="imagenes/500x400geekpng.png" class="img-fluid img-rounded" alt="Imagen ilustrativa">
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS: Opiniones de clientes -->
+<section class="testimonios-section">
+<section class="section-spacing container-fluid text-center px-4 px-md-5">
+  <h2 class="h2-custom">Lo que dicen quienes ya están coleccionando</h2>
+  <p class="p-custom">Cada caja es una sorpresa, pero lo que no cambia es el entusiasmo de nuestra comunidad. Estas son algunas de sus experiencias con ColecClub:</p>
+  <div class="row">
+    <!-- Cada columna es un testimonio -->
+    <div class="col-md-10 mx-auto">
+      <blockquote class="blockquote p-4">
+        “La figura que me tocó este mes fue una locura. Abrí la caja como si fuera Navidad. Todo llegó perfecto y me encantó que incluyera el cómic con portada exclusiva. ¡Ya quiero la próxima!”
+        <footer class="blockquote-footer mt-3">@Juan2D</footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+</section>
+
+<!-- PLANES DE SUSCRIPCIÓN: Sección con 3 opciones destacadas -->
+<section class="section-spacing planes-section text-center">
+  <div class="container">
+  <h2 class="h2-custom">Planes de Suscripción</h2>
+  <p class="p-custom">Elegí el plan que mejor se adapta a tus necesidades. Cada uno incluye diferentes beneficios pensados para vos.</p>
+  
+  <div class="row mt-5">
+    
+    <!-- Card: Plan Básico -->
+    <div class="col-md-4 mb-4">
+      <div class="card p-4 h-100">
+        <!-- Título y precio -->
+        <h5 class="text-uppercase">ColecPlan Origen</h5>
+        <p class="display-6 text-yellow">$9.900 <small>/ mes</small></p>
+        
+        <!-- Imagen ilustrativa -->
+        <img src="imagenes/plan1.png" class="img-fluid img-rounded my-3" alt="Plan Básico">
+
+        <!-- Descripción -->
+        <p class="p-custom">Todo héroe tiene un primer capítulo<br><strong>Incluye:</strong></p>
+        
+        <!-- Lista de beneficios -->
+        <ul class="list-unstyled text-start mx-auto" style="max-width: 340px;">
+          <li>✔ Figura exclusiva</li>
+          <li>✔ Cómic #1 con portada exclusiva</li>
+          <li>✔ Pin esmaltado coleccionable</li>
+          <li>✔ Tarjeta de acceso a GeekSwap</li>
+          <li>✔ Sticker pack + mini-póster</li>
+          <li>✔ Acceso al marketplace interno</li>
+        </ul>
+
+        <!-- Botón CTA -->
+        <a href="#" class="btn btn-dark mt-3">Elegir plan</a>
+      </div>
+    </div>
+
+    <!-- Card: Plan Pro (Recomendado) -->
+    <div class="col-md-4 mb-4">
+      <div class="card p-4 h-100 border border-primary">
+        <!-- Título y precio -->
+        <h5 class="text-uppercase">ColecPlan Saga <span class="badge bg-dark ms-2">Recomendado</span></h5>
+        <p class="display-6 text-yellow">$19.900 <small>/ mes</small></p>
+        
+        <!-- Imagen ilustrativa -->
+        <img src="imagenes/plan2.png" class="img-fluid img-rounded my-3" alt="Plan Pro">
+
+        <!-- Descripción -->
+        <p class="p-custom">Lo épico se colecciona por capítulos.<br><strong>Incluye:</strong></p>
+        
+        <!-- Lista de beneficios -->
+        <ul class="list-unstyled text-start mx-auto" style="max-width: 340px;">
+          <li>✔ Colecbox origen</li>
+          <li>✔ Pin exclusivo trimestral, edición limitada</li>
+          <li>✔ Envío prioritario</li>
+          <li>✔ Acceso anticipado a spoilers</li>
+          <li>✔ Certificado digital coleccionista</li>
+          <li>✔ 15% OFF en tiendas geek partners</li>
+        </ul>
+
+        <!-- Botón CTA -->
+        <a href="detalle.html" class="btn btn-dark mt-3">Elegir plan</a>
+      </div>
+    </div>
+
+    <!-- Card: Plan Full -->
+    <div class="col-md-4 mb-4">
+      <div class="card p-4 h-100">
+        <!-- Título y precio -->
+        <h5 class="text-uppercase">ColecPlan Multiverse</h5>
+        <p class="display-6 text-yellow">$29.900 <small>/ mes</small></p>
+        
+        <!-- Imagen ilustrativa -->
+        <img src="imagenes/plan3.png" class="img-fluid img-rounded my-3" alt="Plan Full">
+
+        <!-- Descripción -->
+        <p class="p-custom">La colección definitiva no tiene límites.<br><strong>Incluye:</strong></p>
+        
+        <!-- Lista de beneficios -->
+        <ul class="list-unstyled text-start mx-auto" style="max-width: 340px;">
+          <li>✔ Merch exclusiva anual (ítem premium)</li>
+          <li>✔ Drops secretos sorpresa</li>
+          <li>✔ Sorteos mensuales exclusivos</li>
+          <li>✔ Mención como coleccionista multiverso</li>
+          <li>✔ Acceso a proximas encuestas</li>
+          <li>✔ 25% OFF en tiendas geek partners</li>
+        </ul>
+
+        <!-- Botón CTA -->
+        <a href="#" class="btn btn-dark mt-3">Elegir plan</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- /PLANES DE SUSCRIPCIÓN -->
+
+<!-- CTA: Llamado a la acción final -->
+<section class="section-spacing container text-center my-5">
+  <h2 class="h2-custom">¿Estás listo 
+para sumarte 
+a Colecclub?</h2>
+  <p class="p-custom">Cultura pop, piezas únicas y una comunidad que vive esto con la misma pasión que vos.No esperes el spoiler. Suscribite y viví la experiencia ColecClub desde adentro.</p>
+  <a href="#" class="btn btn-dark mt-4">Comenzá Ahora</a>
+</section>
+<!-- /CTA -->
+
+
+
+
+<!-- FOOTER: Pie de página -->
+<footer class="text-center py-4">
+  <div class="container">
+    <p class="p-custom">© 2025 Belluccia 3 - Visible Template. Todos los derechos reservados.</p>
+  </div>
+</footer>
+<!-- /FOOTER -->
+
+<!-- Bootstrap Bundle JS (incluye Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+<!-- Script personalizado para cambiar el navbar al hacer scroll -->
+<script>
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar');
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+</script>
+
+<!-- Scripts adicionales -->
+<script src="scripts.js"></script>
+</body>
+</html>

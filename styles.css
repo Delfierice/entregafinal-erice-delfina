@@ -1,0 +1,732 @@
+/* 1. VARIABLES DE DISEÑO */
+:root {
+  --primary-color: #e4ca47;
+  --secondary-color: #e4ca47;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --font-family-base: 'Poppins', sans-serif;
+}
+
+/* 2. ESTILOS GENERALES */
+body {
+  font-family: var(--font-family-base);
+  color: #ededed;
+  background-color: #2d2d2d;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* 3. NAVBAR */
+.navbar {
+  background-color: transparent;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  padding: 15px 0;
+}
+
+.navbar.scrolled {
+  background-color: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.7rem;
+  color: var(--primary-color);
+}
+
+.nav-link {
+  color: var(--light-color);
+  font-weight: 500;
+  margin-left: 20px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+.nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+
+/* 4. HERO */
+.row.p-5 {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: var(--light-color);
+}
+
+p {
+  font-size: 1rem;
+  color: #e7e7e7;
+}
+
+.hero {
+  position: relative;
+  background-image: url('imagenes/fondohero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* oscurito */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px; /* o lo que quieras */
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+/* Título general blanco */
+.h2-custom.h2-blanco {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+/* Título general negro */
+.h2-custom.h2-negro {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  position: relative;
+  text-align: center;
+  color: #000;
+}
+
+/* 4. About */
+.about-section {
+  position: relative;
+  background-image: url('imagenes/fondoabout.png'); /* Cambialo por tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 100px 0;
+  color: #252525;          /* texto blanco para que se vea sobre overlay oscuro */
+  text-align: center;   /* todo centrado */
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2); /* overlay negro semitransparente */
+  z-index: 1;
+}
+
+.about-section .container {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;   /* para que el texto no sea muy ancho */
+  margin: 0 auto;     /* centrar container */
+}
+
+.h2-custom::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--primary-color);
+  margin: 10px auto 0;
+}
+
+.about-section p {
+  color: #242424;         /* párrafo blanco */
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+
+
+/* 4. Contenido */
+.contenido-section {
+  position: relative;
+  background-image: url('imagenes/fondocontenido.png'); /* Cambialo por tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 100px 60px;
+  color: #fff;          /* texto blanco para que se vea sobre overlay oscuro */
+  text-align: center;   /* todo centrado */
+}
+
+.contenido-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2); /* overlay negro semitransparente */
+  z-index: 1;
+}
+
+.contenido-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Título con línea decorativa */
+.h2-custom {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #fff;
+  position: relative;
+}
+
+.h2-custom::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #e4ca47;
+  margin: 10px auto 0;
+}
+
+/* Tarjetas */
+.contenido-section .card {
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f5f5f5;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contenido-section .card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+/* Título de cada card */
+.contenido-section .card h5 {
+  font-weight: 700;
+  color: #242424;
+}
+
+/* Texto de cada card */
+.contenido-section .card p {
+  color: #e4ca47;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+/* Botones */
+.btn {
+  border-radius: 50px;
+  padding: 10px 30px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-dark {
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.btn-dark:hover {
+  background-color: #c5b436;
+}
+
+.btn-outline-dark {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* 4. Geek */
+.geek-section {
+  position: relative;
+  background-image: url('imagenes/fondogeek.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.geek-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2); /* overlay negro semitransparente */
+  z-index: 1;
+}
+
+.geek-section .row {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.geek-section .col-lg-6 h2,
+.geek-section .col-lg-6 p {
+  color: #e7e7e7; /* texto claro como en HERO */
+  text-align: left;
+}
+
+.geek-section .col-lg-6 h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.geek-section .col-lg-6 p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* 5. SECCIONES */
+section {
+  padding: 100px 0;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--primary-color);
+  margin: 20px auto 0;
+}
+
+.accordion-button {
+  --bs-accordion-btn-bg: #e4ca47; /* fondo amarillo cuando está cerrado */
+  --bs-accordion-btn-color: #000; /* texto negro */
+}
+
+.accordion-button:not(.collapsed) {
+  --bs-accordion-active-bg: #e4ca47; /* fondo amarillo cuando está abierto */
+  --bs-accordion-active-color: #000; /* texto negro */
+}  
+
+/* Testimonios*/
+.testimonios-section {
+  position: relative;
+  background-image: url('imagenes/fondogeek.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.testimonios-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2); /* overlay negro semitransparente */
+  z-index: 1;
+}
+
+/* 6. CARDS */
+.card {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.masonry__container {
+  column-count: 4;
+  column-gap: 1rem;
+}
+
+.masonry__item {
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.card-text {
+  color: #242424;
+}
+
+/* 7. TESTIMONIOS */
+.blockquote {
+  background-color: var(--dark-color);
+  border-left: 4px solid var(--primary-color);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.planes-section {
+  background-color: var(--primary-color); /* usa el amarillo ya definido */
+  color: #242424; /* texto oscuro para que se lea sobre fondo claro */
+}
+
+.planes-section h2,
+.planes-section p,
+.planes-section ul li,
+.planes-section .card-title {
+  color: #242424; /* asegura legibilidad en títulos, párrafos y listas */
+}
+
+.planes-section .card {
+  background-color: #fff; /* mantiene las tarjetas sobre fondo claro */
+}
+
+
+/* 8. FORMULARIO */
+form .form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+}
+
+form button.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+  width: 100%;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+/* 9. FOOTER */
+footer {
+  background-color: var(--light-color);
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+/* 10. IMÁGENES */
+img.rounded-circle {
+  border: 5px solid var(--light-color);
+}
+
+/* 11. GALERÍA */
+.container .row img {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container .row img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.detalle1 {
+  position: relative;
+  background-image: url('imagenes/fondodetalle1.png'); /* Cambiá por tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.detalle1::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* overlay opcional */
+  z-index: 1;
+}
+
+.detalle1 .container {
+  position: relative;
+  z-index: 2;
+}
+
+.detalle1 p {
+  color: #ffffff;
+}
+
+.detalle-contenido {
+  position: relative;
+  background-image: url('imagenes/fondogeek.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 60px 0;
+  box-sizing: border-box;
+  color: #fff;
+  flex-direction: column;
+  z-index: 0;
+}
+
+.detalle-contenido::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2);
+  z-index: 0;
+}
+
+.detalle-contenido > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.cta {
+  position: relative;
+  background-image: url('imagenes/fondogeek.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 60px 0;
+  box-sizing: border-box;
+  color: #fff;
+  flex-direction: column;
+  z-index: 0;
+}
+.cta-title {
+  font-size: 3.5rem; /* Más grande */
+  font-weight: 900;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #ffffff; /* texto negro */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: normal;
+}
+
+.cta-title .highlight {
+  color: #fbb615; /* naranja */
+  font-weight: 900;
+}
+
+.btn-cta {
+  background-color: #fbb615;
+  color: #fff;
+  padding: 12px 32px;
+  font-weight: 700;
+  border-radius: 4px;
+  text-transform: none;
+  font-size: 1.1rem;
+  border: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #e6a20e;
+  color: #fff;
+}
+
+/* ============================== */
+/* CUSTOM HELPER CLASSES */
+/* ============================== */
+
+/* ============================== */
+/* CUSTOM HELPER CLASSES */
+/* ============================== */
+
+/* TITULOS */
+.h1-custom {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--light-color);
+}
+
+/* COLOR AMARILLO PARA LOS PRECIOS */
+.text-yellow {
+  color: var(--primary-color);
+}
+
+
+.h3-custom {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--light-color);
+}
+
+.h4-custom {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--lightk-color);
+}
+
+/* PÁRRAFOS Y TEXTOS */
+.p-custom {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  line-height: 1.6;
+}
+
+.lead-custom {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+/* FONDOS E IMÁGENES */
+.bg-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-overlay-light {
+  background-color: rgba(255,255,255,0.7);
+  backdrop-filter: blur(5px);
+}
+
+.bg-overlay-dark {
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  color: #fff;
+}
+
+.img-rounded {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* TEXTOS ADICIONALES */
+.text-uppercase-custom {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-muted-custom {
+  color: #6c757d;
+}
+
+/* ESPACIADOS */
+.section-spacing {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.section-spacing-sm {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+/* ============================== */
+/* MEDIA QUERIES */
+/* ============================== */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .masonry__container {
+    column-count: 3;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .masonry__container {
+    column-count: 2;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .masonry__container {
+    column-count: 1;
+  }
+}
